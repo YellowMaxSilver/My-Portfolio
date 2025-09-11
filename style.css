@@ -1,0 +1,184 @@
+@keyframes colorTransition{
+    0%{color: var(--soloColor2);}
+    100%{color: var(--soloColor3);}
+}
+
+@keyframes colorTransitionReverse{
+    0%{color: var(--soloColor3);}
+    100%{color: var(--soloColor2);}
+}
+
+
+:root{
+    --soloColor1:#a4a8a7;
+    --soloColor2:#ff914c;
+    --soloColor3:#ffde59;
+    --bassColor:#352d38;
+    --darkBassColor:#161616;
+    --brightBassColor:#303030;
+    --textColor:#ececec;
+    --titleTextAnimation: colorTransitionReverse 0.5s forwards;
+    --titleTextAnimationHover: colorTransition 0.5s forwards;
+}
+
+body{
+    background-color: rgb(31, 31, 31);
+}
+
+.navBar{
+    height: 50px;
+    background-color: var(--darkBassColor);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.navBarTitle{
+    color: var(--soloColor2);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 20px;
+    cursor: pointer;
+    animation: var(--titleTextAnimation);
+}
+
+.navBarTitle:hover{
+    animation: var(--titleTextAnimationHover);
+}
+
+.navBarSubTitle{
+    color: var(--soloColor1);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.welcome{
+    width: calc(100% - 40px);
+    height: 500px;
+    display: flex;
+    margin-top: 50px;
+    position: relative;
+}
+
+.welcomeText{
+    width: 40%;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-top: auto;margin-bottom: auto;
+}
+
+.welcomeText h1{
+    color: var(--textColor);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.welcomeText h2{
+    color: var(--soloColor2);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    margin: 0px;
+}
+
+.welcomeText .fullStrackText{
+    color: var(--textColor);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.socialMediaIcons{
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+.socialMediaIcon{
+    background-color: var(--brightBassColor);
+    background-size: calc(100% - 20px);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.welcome .welcomeBanner{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url("mega_scrambles.jpg");
+    background-size: 100%;
+    width: 60%;
+    height: 100%;
+    margin-right: -50px;
+}
+
+
+.lenguages{
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    display: flex;
+}
+.title{
+    color: var(--soloColor2);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.lenguages .icons{
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon{
+    width: 70px;
+    height: 70px;
+    background-color: var(--brightBassColor);
+    background-size: calc(100% - 20px);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
