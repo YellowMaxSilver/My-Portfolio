@@ -4,6 +4,5 @@
   },
   "scripts": {
     "start":"cd client && npm start"
-  },
-  "type": "module"
+  }
 }
