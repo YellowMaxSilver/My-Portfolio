@@ -99,7 +99,7 @@ body{
     display: flex;
     margin-top: 50px;
     position: relative;
-    background-image: url("banner1.png");
+    background-image: url("/images/banner1.png");
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: right;

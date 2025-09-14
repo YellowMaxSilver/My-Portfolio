@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "vite": "^7.1.5"
+  },
+  "scripts": {
+    "start":"cd client && npm run dev"
+  }
+}
