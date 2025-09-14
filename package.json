@@ -3,6 +3,6 @@
     "sirv-cli": "^2.0.2"
   },
   "scripts": {
-    "start": "chmod +x ./node_modules/.bin/sirv-cli && sirv-cli . --port $PORT"
+    "start": "sirv-cli . --port $PORT"
   }
 }
