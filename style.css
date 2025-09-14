@@ -8,6 +8,27 @@
     100%{color: var(--soloColor2);}
 }
 
+@keyframes backgroundColorTransition{
+    0%{background-color: var(--soloColor2);}
+    100%{background-color: var(--soloColor3);}
+}
+
+@keyframes backgroundColorTransitionReverse{
+    0%{background-color: var(--soloColor3);}
+    100%{background-color: var(--soloColor2);}
+}
+
+
+@keyframes backgroundColorTransition2{
+    0%{background-color: var(--brightBassColor);}
+    100%{background-color: var(--soloColor2);}
+}
+
+@keyframes backgroundColorTransitionReverse2{
+    0%{background-color: var(--soloColor2);}
+    100%{background-color: var(--brightBassColor);}
+}
+
 
 :root{
     --soloColor1:#a4a8a7;
@@ -19,6 +40,10 @@
     --textColor:#ececec;
     --titleTextAnimation: colorTransitionReverse 0.5s forwards;
     --titleTextAnimationHover: colorTransition 0.5s forwards;
+    --backgroundAnimationReverse: backgroundColorTransitionReverse 0.5s forwards;
+    --backgroundAnimation: backgroundColorTransition 0.5s forwards;
+    --backgroundAnimationReverse2: backgroundColorTransitionReverse2 0.5s forwards;
+    --backgroundAnimation2: backgroundColorTransition2 0.5s forwards;
 }
 
 body{
@@ -136,6 +161,11 @@ body{
     height: 60px;
     border-radius: 60px;
     cursor: pointer;
+    animation: var(--backgroundAnimationReverse);
+}
+
+.socialMediaIcon:hover{
+    animation:var(--backgroundAnimation)
 }
 
 
@@ -305,6 +335,70 @@ body{
     border-radius: 20px;
     padding: 5px;
     cursor: pointer;
+    animation: var(--backgroundAnimationReverse2);
+}
+
+.icon:hover{
+    width: 70px;
+    height: 70px;
+    background-color: var(--brightBassColor);
+    background-size: calc(100% - 20px);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    padding: 5px;
+    cursor: pointer;
+    animation: var(--backgroundAnimation2);
+}
+
+.contact{
+    width: 100%;
+   position: relative;
+}
+
+.contact input,.contact textarea{
+    background-color: #0000003a;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px solid;
+    border-bottom: 2px solid var(--soloColor2);
+    width: 60%;
+    height: 40px;
+    margin-left: 20%;
+    color: var(--textColor);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    margin-top: 20px;
+    outline: none;
+}
+
+.contact textarea{
+    width: 60%;
+    height: 100px;
+    resize: unset;
+}
+
+.contact button{
+    width: 30%;
+    height: 50px;
+    color: black;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 220;
+    font-size: 22px;
+    border: 0px solid;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-left: 35%;
+    animation: var(--backgroundAnimationReverse)
+}
+
+.contact button:hover{
+    animation: var(--backgroundAnimation);
 }
 
 footer{
