@@ -93,6 +93,201 @@ body{
     cursor: pointer;
 }
 
+.navBar ul{
+    display: flex;
+    float: right;
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: 50px;
+    height: 100%;
+    align-items: center;
+}
+
+.navBar ul li{
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    color: var(--soloColor2);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.navBar ul li:hover{
+    background-color: var(--brightBassColor);
+    color: var(--soloColor3);
+    transition: 0.3s;
+}
+
+.popUp{
+    width: 400px;
+    height: 300px;
+    position: fixed;
+    top: calc(50% - 150px);
+    left: calc(50% - 200px);
+    background-color: var(--darkBassColor);
+    z-index: 4;
+    display: none;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.556);
+}
+.popUpCloseButton{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-image: url("close_icon.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+}
+.popUpContent{
+    width: 100%;
+    height: 100%;
+}
+
+.popUpTitle{
+    color: var(--soloColor2);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    width: 100%;
+    }
+.popUpDescription{
+    color: var(--textColor);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.popUpIcon{
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    filter: brightness(0) invert(1);
+}
+
+.popUpLink{
+    color: var(--soloColor1);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    word-wrap: break-word;
+}
+
+.visitMyLinkedinButton{
+    width: 90%;
+    height: 50px;
+    background-color: #0066ff;
+    position: absolute;
+    bottom: 25px;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.visitMyWhatsaapButton{
+    width: 90%;
+    height: 50px;
+    background-color: #25d366;
+    position: absolute;
+    bottom: 25px;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.visitMyLinkedinButton p{
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    margin: 0;
+}
+
+.visitMyWhatsaapButton p{
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+    margin: 0;
+}
+
+.linkedinContent{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.whatsaapContent{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.emailContent{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.phoneContent{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.blackFilter{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 2;
+    display: none;
+}
+
 .welcome{
     width: calc(100%);
     height: 600px;
@@ -430,7 +625,7 @@ footer{
 
 /*responsivity*/
 
-@media screen and (max-width:633px) {
+@media screen and (max-width:500px) {
     .navBar{
         height: 30px;
         background-color: var(--darkBassColor);
@@ -442,6 +637,9 @@ footer{
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .navBar ul{
+        display: none;
     }
 
     .navBarTitle{
@@ -478,26 +676,27 @@ footer{
         margin-top: 0px;
         position: relative;
         background-image: url("portfolioDraw.png");
-        background-size: 80%;
-        background-repeat: no-repeat;
-        background-position: right;
+        background-size: 100%;
+        background-repeat: cover;
+        background-position: center;
     }
 
     .welcomeText{
-        width: 40%;
+        width: 100%;
         padding-top: 20px;
         padding-left: 5px;
         margin-top: auto;margin-bottom: auto;
     }
 
     .welcomeText h1{
+        width: 100%;
         color: var(--textColor);
         font-family:Verdana, Geneva, Tahoma, sans-serif;
         font-style: normal;
         font-family: "Roboto", sans-serif;
         font-weight: 200;
-        font-size: 12px;
-        margin-top: 20px;
+        font-size: 40px;
+        margin-top: 30px;
         margin-bottom: 0px;
     }
 
@@ -507,8 +706,9 @@ footer{
         font-style: normal;
         font-family: "Roboto", sans-serif;
         font-weight: 300;
-        font-size: 13px;
+        font-size: 20px;
         margin: 0px;
+        margin-top: 40px;
     }
 
     .welcomeText .fullStrackText{
@@ -517,8 +717,89 @@ footer{
         font-style: normal;
         font-family: "Roboto", sans-serif;
         font-weight: 200;
-        font-size: 15px;
-        margin-top: 10px;
+        font-size: 20px;
+        margin-top: 20px;
     }
+
+    .aboutMe{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    position: relative;
+    margin-top: 120px;
+    }
+
+    .aboutMeInfo{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+.blog{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    display: grid;
+}
+
+.blogWidget{
+    width: 300px;
+    height: 400px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.556);
+    margin-top: 40px;
+}
+
+.blogWidget .blogBanner{
+    background-color: black;
+    width: 100%;
+    height: 45%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.blogWidget .infoBox{
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    bottom: 0;
+    left: 0;
+    background-color: var(--brightBassColor);
+}
+
+.infoBox .infoBoxTitle{
+    color: var(--soloColor2);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 25px;
+    margin-top: 10px;
+    width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.infoBox .infoBoxDescription{
+    color: var(--textColor);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    margin-top: 10px;
+    width: 90%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 }

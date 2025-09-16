@@ -3,6 +3,7 @@
     "sirv-cli": "^2.0.2"
   },
   "scripts": {
+    "dev":"npx sirv . --dev",
     "start": "npx  sirv-cli . --port $PORT --host 0.0.0.0"
   }
 }
