@@ -17,11 +17,17 @@
         <p class="navBarTitle">Eduardo Sodré</p>
         <p class="navBarSubTitle">Dev</p>
 
-        <ul>
-            <li onclick="scrollDown()">Sobre mim</li>
-            <li onclick="scrollDown()">Serviços</li>
-            <li onclick="scrollDown()">Linguagens</li>
-            <li onclick="scrollDown()">Contato</li>
+        <ul class="menu">
+            <li onclick="scrollDown('aboutMe')" id="aboutMe">Sobre mim</li>
+            <li onclick="scrollDown('services')" id="services">Serviços</li>
+            <li onclick="scrollDown('lenguages')" id="languages">Linguagens</li>
+            <li onclick="scrollDown('contact')" id="contact">Contato</li>
+            <div class="languageBox" onclick="openLanguageOptions()"><p id="lenguageMode">Portugês(br)</p></div>
+            <ul class="languageOptions">
+                <li onclick="turnLanguage()">Portugês(br)</li>
+                <li onclick="turnLanguage('english')">Inglês(en)</li>
+                <li onclick="turnLanguage('spanish')">Espanhol(es)</li>
+            </ul>
         </ul>
     </nav>
 
@@ -47,9 +53,9 @@
 
     <section class="welcome">
         <div class="welcomeText">
-            <h2>Bem-Vindo</h2>
-            <h1>Olá, eu sou Eduardo Sodré</h1>
-            <p class="fullStrackText">Desenvolvedor Full-strack e Designer</p>
+            <h2 id="welcome">Bem-Vindo</h2>
+            <h1 id="hello">Olá, eu sou Eduardo Sodré</h1>
+            <p class="fullStrackText" id="fullStrackText">Desenvolvedor Full-strack e Designer</p>
             <div class="socialMediaIcons">
                 <div class="socialMediaIcon" onclick="openPopUp('linkedin')" style="background-image: url('https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Linkedin2_svg-512.png');"></div>
                 <div class="socialMediaIcon" onclick="openPopUp('email')" style="background-image: url('https://cdn-icons-png.flaticon.com/512/121/121923.png');"></div>
@@ -205,6 +211,14 @@
         <input id="contactEmailOrNumber" placeholder="Email ou Número" type="email number" autocomplete="off">
         <textarea id="contactDescription" placeholder="Descrição" autocomplete="off" maxlength="500"></textarea>
         <button id="actionButton"  class="actionButton">Enviar formulário</button>
+
+        <p class="title" style="margin-top: 40px;font-size: 20px;">Ou</p>
+        <div class="socialMediaIcons">
+                <div class="socialMediaIcon" onclick="openPopUp('linkedin')" style="background-image: url('https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Linkedin2_svg-512.png');"></div>
+                <div class="socialMediaIcon" onclick="openPopUp('email')" style="background-image: url('https://cdn-icons-png.flaticon.com/512/121/121923.png');"></div>
+                <div class="socialMediaIcon" onclick="openPopUp('whatsaap')" style="background-image: url('https://images.icon-icons.com/2368/PNG/512/whatsapp_icon_143661.png');"></div>
+                <div class="socialMediaIcon" onclick="openPopUp('phone')" style="background-image: url('https://cdn-icons-png.flaticon.com/512/94/94915.png');"></div>
+        </div>
     </section>
 
     <footer>

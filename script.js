@@ -9,9 +9,27 @@ document.addEventListener("DOMContentLoaded",()=>{
     })
 })
 
-function scrollDown(){
+function scrollDown(section){
+    let topValue = 0;
+    switch(section){
+        case "aboutMe":
+            topValue = 600;
+            break;
+        case "services":
+            topValue = 1100;
+            break;
+        case "projects":
+            topValue = 1700;
+            break;
+        case "lenguages":
+            topValue = 2300;
+            break;
+        case "contact":
+            topValue = 3100;
+            break;
+    }
     window.scrollTo({
-        top: document.body.scrollHeight,
+        top: topValue,
         behavior: 'smooth'
     });
 }
@@ -62,7 +80,73 @@ function closePopUp(){
     blackFilter.style.display = "none";
 }
 
+function openLanguageOptions(){
+    const languageOptions = document.querySelector(".languageOptions");
+    languageOptions.style.display = "block";
+    
+    document.addEventListener('click',function handleClickOutsideBox(event) {
+        const box = document.querySelector(".navBar");
+        if (!box.contains(event.target)) {
+            languageOptions.style.display = "none";
+            document.removeEventListener('click', handleClickOutsideBox);
+        }   
+    });
+}
 
+function turnLanguage(language){
+    console.log(language);
+    const lenguageMode = document.getElementById("lenguageMode");
+    const languageOptions = document.querySelector(".languageOptions");
+    languageOptions.style.display = "none";
+
+    const welcome = document.getElementById("welcome");
+    const hello = document.getElementById("hello");
+    const fullStrackText = document.getElementById("fullStrackText");
+    const aboutMe = document.getElementById("aboutMe");
+    const services = document.getElementById("services");
+    const languages = document.getElementById("languages");
+    const contact = document.getElementById("contact");
+    const actionButton = document.getElementById("actionButton");
+
+    switch(language){
+        case "english":
+            welcome.innerText = "Welcome";
+            hello.innerText = "Hi, I'm Eduardo Sodré";
+            fullStrackText.innerText = "Full-strack Developer and Designer";
+            aboutMe.innerText = "About me";
+            services.innerText = "Services";
+            languages.innerText = "Languages";
+            contact.innerText = "Contact";
+            actionButton.innerText = "Send";
+
+            lenguageMode.innerText = "English(en)";
+            break;
+        case "spanish":
+            welcome.innerText = "Bienvenido";
+            hello.innerText = "Hola, soy Eduardo Sodré";
+            fullStrackText.innerText = "Desarrollador Full-strack y Diseñador";
+            aboutMe.innerText = "Sobre mí";
+            services.innerText = "Servicios";
+            languages.innerText = "Lenguajes";
+            contact.innerText = "Contacto";
+            actionButton.innerText = "Enviar";
+
+            lenguageMode.innerText = "Español(es)";
+            break;
+        default:
+            welcome.innerText = "Bem-Vindo";
+            hello.innerText = "Olá, eu sou Eduardo Sodré";
+            fullStrackText.innerText = "Desenvolvedor Full-strack e Designer";
+            aboutMe.innerText = "Sobre mim";
+            services.innerText = "Serviços";
+            languages.innerText = "Linguagens";
+            contact.innerText = "Contato";
+            actionButton.innerText = "Enviar";
+
+            lenguageMode.innerText = "Portugês(br)";
+            break;
+    }
+}
 
 async function sendContact(){
     console.log("active")

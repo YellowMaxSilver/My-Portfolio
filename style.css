@@ -93,7 +93,7 @@ body{
     cursor: pointer;
 }
 
-.navBar ul{
+.navBar .menu{
     display: flex;
     float: right;
     list-style-type: none;
@@ -103,7 +103,7 @@ body{
     align-items: center;
 }
 
-.navBar ul li{
+.navBar .menu li{
     display: flex;
     padding-left: 20px;
     padding-right: 20px;
@@ -119,10 +119,48 @@ body{
     justify-content: center;
 }
 
-.navBar ul li:hover{
+.navBar .menu li:hover{
     background-color: var(--brightBassColor);
     color: var(--soloColor3);
     transition: 0.3s;
+}
+
+.languageBox{
+    width: 120px;
+    height: calc(100% - 10px);
+    display: flex;
+    border: 2px solid var(--soloColor2);
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.languageBox p{
+    color: var(--soloColor2);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.languageOptions{
+    display: none;
+    width: 120px;
+    position: absolute;
+    top: 50px;
+    right: 70px;
+    list-style-type: none;
+    z-index: 5;
+    padding-left: 0px;
+}
+
+.languageOptions li{
+    width: 100%;
+    padding: 10px;
+    background-color: var(--darkBassColor);
 }
 
 .popUp{
@@ -551,6 +589,13 @@ body{
    position: relative;
 }
 
+.contact .socialMediaIcons{
+    width: 100%;
+    margin-left: auto;margin-right: auto;
+    justify-content: center;
+    margin-top: 40px;
+}
+
 .contact input,.contact textarea{
     background-color: #0000003a;
     border-top: 0px;
@@ -800,6 +845,36 @@ footer{
     text-align: left;
     margin-left: auto;
     margin-right: auto;
+}
+
+.lenguages{
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    display: flex;
+}
+
+.lenguages .icons{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon{
+    width: 70px;
+    height: 70px;
+    background-color: var(--brightBassColor);
+    background-size: calc(100% - 20px);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    padding: 5px;
+    cursor: pointer;
+    animation: var(--backgroundAnimationReverse2);
 }
 
 }
